@@ -66,3 +66,9 @@ Fusce efficitur efficitur mi, eget dignissim ligula. Integer placerat ex ut mass
 Curabitur accumsan velit id ante lacinia rhoncus. Nunc luctus ex sed purus ullamcorper tincidunt. Maecenas accumsan ligula vitae nunc viverra, sit amet suscipit lacus tempus. Nam nec turpis mi. Suspendisse aliquet, tortor ac fermentum rhoncus, enim est viverra ante, nec efficitur tellus elit ut arcu. Ut consectetur, tellus vitae fringilla volutpat, turpis lacus rhoncus enim, nec blandit nunc tortor a odio. Curabitur id nisi nisl. Etiam malesuada iaculis erat, at ultricies mi pellentesque non. Proin at consequat ipsum. Integer id ligula fringilla, tincidunt sapien id, fermentum ipsum. Mauris efficitur lectus a varius interdum.
 
 Sed tristique facilisis metus, a tr
+
+```python
+
+ const a = 23
+
+```
