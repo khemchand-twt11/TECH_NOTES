@@ -6,10 +6,13 @@ This `notes.md` file contains my collection of notes on React. It covers various
 
 - [**React Notes**](#react-notes)
   - [Summary](#summary)
+  - [Introduction](#introduction)
   - [React Components](#react-components)
   - [State Management](#state-management)
   - [React Hooks](#react-hooks)
   - [React Router](#react-router)
+
+## Introduction
 
 ## React Components
 
