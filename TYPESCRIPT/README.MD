@@ -1,3 +1,5 @@
+ <img src ="/IMAGES/typescript2.png" width="200%">
+
 # **TYPESCRIPT**
 
 - Typescript is a statically-typed superset of JavaScript(JavaScript with type annotations).
