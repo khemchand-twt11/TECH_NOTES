@@ -1,5 +1,9 @@
  <img src ="/IMAGES/typescript2.png" width="200%">
 
+- [**TYPESCRIPT**](#typescript)
+- [**Initialize a typescript project**](#initialize-a-typescript-project)
+- [**Important Terms**](#important-terms)
+
 # **TYPESCRIPT**
 
 - Typescript is a statically-typed superset of JavaScript(JavaScript with type annotations).
@@ -69,12 +73,18 @@
   }
   ```
 
-  - **target**: Ecmascript version in which you want to compile your typescript into JavaScript.
-  - **module**: Define module system
+  - **target**: Specify Ecmascript version in which you want to compile your typescript into JavaScript.
+  - **module**: Define module system.
   - **outDir**: Specify the output directly where transpiled JavaScript code will be placed.
   - **strict**: Enable strict type checking and other strict compilation settings.
   - **include**: Specify the file pattern to include in compilation. here for `src/**/*.ts` it will include all the .ts files within src directory and subdirectories.
   - **exclude**: Specify file pattern to exlucde from compilation.
+
+- Optional package to run .ts file without transpiling them to .js files.
+
+  ```
+   npm install ts-node
+  ```
 
 # **Important Terms**
 
