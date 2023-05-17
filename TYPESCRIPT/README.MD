@@ -1,10 +1,13 @@
  <img src ="/IMAGES/typescript2.png" width="200%">
 
-- [**TYPESCRIPT**](#typescript)
+# **Typescript Notes**
+
+- [**Typescript Notes**](#typescript-notes)
+- [**Introduction**](#introduction)
 - [**Initialize a typescript project**](#initialize-a-typescript-project)
 - [**Important Terms**](#important-terms)
 
-# **TYPESCRIPT**
+# **Introduction**
 
 - Typescript is a statically-typed superset of JavaScript(JavaScript with type annotations).
 - It helps us write robust and maintanable code.
