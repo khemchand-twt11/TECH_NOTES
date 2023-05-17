@@ -69,14 +69,13 @@
   }
   ```
 
+  - **target**: Ecmascript version in which you want to compile your typescript into JavaScript.
+  - **module**: Define module system
+  - **outDir**: Specify the output directly where transpiled JavaScript code will be placed.
+  - **strict**: Enable strict type checking and other strict compilation settings.
+  - **include**: Specify the file pattern to include in compilation. here for `src/**/*.ts` it will include all the .ts files within src directory and subdirectories.
+  - **exclude**: Specify file pattern to exlucde from compilation.
+
 # **Important Terms**
 
-- **transpile** : Short for transforming, refers to the process of converting source code written in one language (such as JavaScript) to another language (such as typescript).
-
-```
-
-```
-
-```
-
-```
+- **transpilation** : Short for transforming, refers to the process of converting source code written in one language (such as JavaScript) to another language (such as typescript).
