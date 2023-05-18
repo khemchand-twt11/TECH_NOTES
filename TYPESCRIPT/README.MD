@@ -3,11 +3,11 @@
 # **Typescript Notes**
 
 - [**Typescript Notes**](#typescript-notes)
-- [**Introduction**](#introduction)
-- [**Initialize a typescript project**](#initialize-a-typescript-project)
-- [**Important Terms**](#important-terms)
+- [Introduction](#introduction)
+- [Initialize a typescript project](#initialize-a-typescript-project)
+- [Important Terms](#important-terms)
 
-# **Introduction**
+# Introduction
 
 - Typescript is a statically-typed superset of JavaScript(JavaScript with type annotations).
 - It helps us write robust and maintanable code.
@@ -15,7 +15,7 @@
 - Typescript iteself doesn't add any optimization
 - Typescript code is transpiled to JavaScript, TypeScript code can't be run in the browser directly.
 
-# **Initialize a typescript project**
+# Initialize a typescript project
 
 - Create a foler
 
@@ -89,6 +89,6 @@
    npm install ts-node
   ```
 
-# **Important Terms**
+# Important Terms
 
 - **transpilation** : Short for transforming, refers to the process of converting source code written in one language (such as JavaScript) to another language (such as typescript).
