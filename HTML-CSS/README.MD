@@ -33,3 +33,33 @@
     here rendering engine can be thought of like brain of the browser that read and interepret code and display it accordingly on our screen.
 
   - `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` This tag tells the browser how to handle and display webpage on different screen sizes. here `name=viewport` tells that it's defining the viewport, which is the visible part of the webpage on the scree. `content="width=device-width` It tells the browser that the width is equal to device width.`initial-scale=1.0"` It tells about the zoom level of the webpage when it loads first, 1.0 means the original size without zooming in or out.
+
+# CSS (Cascading Style Sheets)
+
+## Responsiveness
+
+CSS Units - Relative Units
+
+The **em** and **rem** are relative units because they are relative to the font-size of other elements.
+
+- **em** are relative to their parent fon't size.
+  There is issue with em when we apply it to nested elements. below the first p tag size is 24px but for the second p tag it is 28.8px that is inconsistent
+
+  ```html
+  <div style="font-size: 16px;">
+    <!-- 16*1.5 =24px -->
+    <p style="font-size: 1.5em;">Lorem ipsum dolor sit amet</p>
+    <div style="font-size: 1.2em;">
+      <!-- 16*1.2*1.5 =28.8 -->
+      <p style="font-size: 1.5em;">This is a nested paragraph</p>
+    </div>
+  </div>
+  ```
+
+- **rem** unit is short of root em that means it's always relative to the root of the document. here root is html element.
+
+### How to decide which unit to use
+
+- Font-size : rem
+- Padding and margin: em
+- width: em or percentage

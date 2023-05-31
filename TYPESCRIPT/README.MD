@@ -5,6 +5,8 @@
 - [**Typescript Notes**](#typescript-notes)
 - [Introduction](#introduction)
 - [Initialize a typescript project](#initialize-a-typescript-project)
+- [Types in Typescript](#types-in-typescript)
+  - [**The Primitive : string,number and boolen**](#the-primitive--stringnumber-and-boolen)
 - [Important Terms](#important-terms)
 
 # Introduction
@@ -89,6 +91,20 @@
    npm install ts-node
   ```
 
+# Types in Typescript
+
+## **The Primitive : string,number and boolen**
+
+we can specifiy type with each variable in typescript
+
+- `string` represents string values
+
+```
+const str:string = "hello"
+```
+
 # Important Terms
 
 - **transpilation** : Short for transforming, refers to the process of converting source code written in one language (such as JavaScript) to another language (such as typescript).
+- **Downleveling**: Process of moving from newer or "higher" version of EcmaScript to older or "lower" version is called downleveling.
+  While transpilation, typescript rewrites the code in older version of Ecmascript to avoid this we can specifiy the target in tsconfig.json file to newer version of typescript
