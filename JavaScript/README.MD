@@ -26,7 +26,7 @@ const obj = {
   age: "21",
   hobbies: ["eating", "travel", "music"],
   meta: {
-    height: "30ft",
+    height: "5ft",
     isMarried: "false",
   },
 };
