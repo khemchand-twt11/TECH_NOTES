@@ -3,11 +3,14 @@
 - [**JavaScript**](#javascript)
 - [Interview Questions](#interview-questions)
 - [Destructuring](#destructuring)
+  - [Destructuring Arrays](#destructuring-arrays)
   - [Destructuring Objects](#destructuring-objects)
 
 # Interview Questions
 
 # Destructuring
+
+### Destructuring Arrays
 
 ### Destructuring Objects
 
