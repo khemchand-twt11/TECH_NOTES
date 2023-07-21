@@ -260,28 +260,29 @@ document-> html->body->(nav->h1,main->p)
 
 let's look at the virtual DOM representation of the following HTML document.
 
-```html
-<div>
-  <h1>Hi</h1>
-  <p>React is awesome</p>
-</div>
-```
+    ```html
+    <div>
+      <h1>Hi</h1>
+      <p>React is awesome</p>
+    </div>
+    ```
 
-```JavaScript
-{
-  type: 'div',
-  childrens: [
-    {
-      type: 'h1',
-      text: 'Hi'
-    },
-    {
-      type: 'p',
-      text: 'React is awesome'
+
+    ```javascript
+     {
+      type: 'div',
+      childrens: [
+        {
+          type: 'h1',
+          text: 'Hi'
+        },
+        {
+          type: 'p',
+          text: 'React is awesome'
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 ### What is JSX ?
 
@@ -330,4 +331,41 @@ It's a container state container for javascript applications
 
 **Difference between pure and impure function**
 
-**pure functions**: 1. pure function soley depend on the input parameters being passed 2. The function doesn't cause any side effect.
+**pure functions**:
+
+1. Pure function soley depend on the input parameters being passed
+
+   example:
+
+   ```javascript
+   function square(n) {
+     return n * n
+   }
+   ```
+
+2. Pure function doesn't cause any side effect(anything beyone computing and returning a value).
+
+   example:
+
+   ```javascript
+   /* side effect being performed */
+
+   function change(obj) {
+     obj.price = 300
+     return obj
+   }
+   ```
+
+**Impure functions**
+
+1. function that performs side effects.
+
+   example:
+
+   ```javascript
+   function squareArray(items) {
+     for (let i = 0; i < items.length; i++) {
+       items[i] = items[i] ** 2
+     }
+   }
+   ```
