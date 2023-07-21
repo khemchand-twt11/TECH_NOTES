@@ -39,12 +39,6 @@ This file contains my collection of notes on React. It covers various topics rel
     - [React building blocks](#react-building-blocks)
       - [What is DOM ?](#what-is-dom-)
       - [What is Virtual DOM ?](#what-is-virtual-dom-)
-    - [What is JSX ?](#what-is-jsx-)
-    - [React core](#react-core)
-    - [React Render](#react-render)
-    - [React Reconciler](#react-reconciler)
-  - [Context](#context)
-  - [Redux](#redux)
 
 ## Introduction
 
@@ -258,18 +252,17 @@ document-> html->body->(nav->h1,main->p)
 - it's an object create to resemble the actual DOM.
 - it's less expensive than actual DOM as it doesn't write to the screen
 
-let's look at the virtual DOM representation of the following HTML document.
+  let's look at the virtual DOM representation of the following HTML document.
 
-    ```html
-    <div>
-      <h1>Hi</h1>
-      <p>React is awesome</p>
-    </div>
-    ```
+  ```html
+  <div>
+    <h1>Hi</h1>
+    <p>React is awesome</p>
+  </div>
+  ```
 
-
-    ```javascript
-     {
+  ```JavaScript
+    {
       type: 'div',
       childrens: [
         {
@@ -282,7 +275,7 @@ let's look at the virtual DOM representation of the following HTML document.
         }
       ]
     }
-    ```
+  ```
 
 ### What is JSX ?
 
