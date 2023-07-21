@@ -1,4 +1,13 @@
-# **HTML (HYPER TEXT MARKUP LANGUAGE)**
+- [**HTML**](#html)
+  - [**HTML (HYPER TEXT MARKUP LANGUAGE)**](#html-hyper-text-markup-language)
+    - [**Boilerprate code (basic structure for a webpage)**](#boilerprate-code-basic-structure-for-a-webpage)
+- [**CSS**](#css)
+  - [Responsiveness](#responsiveness)
+    - [How to decide which unit to use](#how-to-decide-which-unit-to-use)
+
+# **HTML**
+
+## **HTML (HYPER TEXT MARKUP LANGUAGE)**
 
 - Language that is used to create webpage on the internet.
 - Hyper refers to Hyper links that is digital reference to data on the internet.
@@ -34,7 +43,14 @@
 
   - `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` This tag tells the browser how to handle and display webpage on different screen sizes. here `name=viewport` tells that it's defining the viewport, which is the visible part of the webpage on the scree. `content="width=device-width` It tells the browser that the width is equal to device width.`initial-scale=1.0"` It tells about the zoom level of the webpage when it loads first, 1.0 means the original size without zooming in or out.
 
-# CSS (Cascading Style Sheets)
+Q) What's the use of `DOCTYPE html` ?
+
+- It specifies the version of html being used.
+- not generally a html tag, rather a instructions to the browsers about the type of document being displayed.
+- It's highly recommended to use because of following reasons
+  - tells browser that the document is an html-5 document,helps browsers to interpret and render markup correctly.
+
+# **CSS**
 
 ## Responsiveness
 

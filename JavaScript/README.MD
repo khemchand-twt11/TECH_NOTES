@@ -5,8 +5,11 @@
 - [Destructuring](#destructuring)
   - [Destructuring Arrays](#destructuring-arrays)
   - [Destructuring Objects](#destructuring-objects)
+- [polyfills](#polyfills) - [polyfill of Filter method](#polyfill-of-filter-method)
 
 # Interview Questions
+
+hi why are you
 
 # Destructuring
 
@@ -34,4 +37,26 @@ const obj = {
   },
 };
 destructor(obj);
+```
+
+# polyfills
+
+pollyfill is a piece of code that is used to provide modern functionallity on older browsers that do not natively support it.
+
+#### polyfill of Filter method
+
+```js
+Array.prototype.myFilter = function (callback) {
+  let tempArr = [];
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, index)) {
+      tempArr.push(this[i]);
+    }
+  }
+  return tempArr;
+};
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+const evenArray = arr.myFilter((val, i, arr) => val % 2 === 0);
+console.log(evenArray);
 ```

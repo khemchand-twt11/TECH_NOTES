@@ -35,6 +35,16 @@ This file contains my collection of notes on React. It covers various topics rel
       - [userId](#userid)
       - [useSyncExternalStore](#usesyncexternalstore)
   - [React Router](#react-router)
+  - [React under the hood](#react-under-the-hood)
+    - [React building blocks](#react-building-blocks)
+      - [What is DOM ?](#what-is-dom-)
+      - [What is Virtual DOM ?](#what-is-virtual-dom-)
+    - [What is JSX ?](#what-is-jsx-)
+    - [React core](#react-core)
+    - [React Render](#react-render)
+    - [React Reconciler](#react-reconciler)
+  - [Context](#context)
+  - [Redux](#redux)
 
 ## Introduction
 
@@ -57,6 +67,7 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  console.log(a)
 );
 ```
 
@@ -76,7 +87,7 @@ Component Syntax
 
 ```js
 function Greeting() {
-  return <h1>Learning React!</h1>;
+  return <h1>Learning React!</h1>
 }
 ```
 
@@ -209,3 +220,114 @@ To prioritize rendering, use one of these hooks.
 - It is not a part of official react library
 - Provide a way to manage navigation between different views.
 - Content loaded without full page reload which happens in html based websites.
+
+## React under the hood
+
+### React building blocks
+
+let's first go through some key points that will be important going forward.
+
+#### What is DOM ?
+
+- it's an abbreviation of document object model.
+- It represent html pages as a tree of elements called nodes
+- document is the root node
+- DOM interface lets us do operations such as the addition, modification,or removal of items from the document.
+- whenever any change happens to the DOM, the browser re-renders the UI.
+
+let's look at the DOM representation of following html document.
+
+```html
+<html>
+  <body>
+    <nav>
+      <h1>Hi</h1>
+    </nav>
+    <main>
+      <p>React is awesome</p>
+    </main>
+  </body>
+</html>
+```
+
+document-> html->body->(nav->h1,main->p)
+
+#### What is Virtual DOM ?
+
+- it's a replica of the actual DOM.
+- it's an object create to resemble the actual DOM.
+- it's less expensive than actual DOM as it doesn't write to the screen
+
+let's look at the virtual DOM representation of the following HTML document.
+
+```html
+<div>
+  <h1>Hi</h1>
+  <p>React is awesome</p>
+</div>
+```
+
+```JavaScript
+{
+  type: 'div',
+  childrens: [
+    {
+      type: 'h1',
+      text: 'Hi'
+    },
+    {
+      type: 'p',
+      text: 'React is awesome'
+    }
+  ]
+}
+```
+
+### What is JSX ?
+
+- it's a syntax extension to js.
+- with the help of it react combines HTML and JavaScript easily.
+- usually refer it as syntatic sugar
+- it is then converted to js using code transpiler called babel
+
+### React core
+
+- it contains all of the api required to define react components
+- it is where we will find methods such as createElement.
+- it also manages state management,communicate between various components, and so forth.
+
+### React Render
+
+- it takes charge or rendering react components on various platforms such as the web,mobile, and so on.
+
+- different platforms utilize numerous rendering methods. for example in web apps , the DOM is utilized to render the content. to alter the dom and re-render the UI, we may use methods like appendChild() and remove() on the DOM nodes.
+- for mobile apps , we require UI support straight from the operating system. however, the react library doesn't manage this, it is the rendere that performs all of the rendering taks for multiple platforms.
+
+### React Reconciler
+
+- It's the process through which react changes the browser DOM.
+- It contains the diffing mechanism, which decides which part of tree the renderer should update.
+
+## Context
+
+context let's a component recieve information from it's distant parent without passing it as a props
+
+Steps involved while using context
+
+1. Create a context : firs step is to create a context using `createContext()` function provided by react. This creates an object that holds the shared data or state. The inital value can be passed as an argument to `createContext()`
+2. Define a provider component: Next step is to define a provider component that will wrap all the components that need access to context value. It is responsibe for providing the context value to it's child components. It accepts a `value` prop that defines the data or state to be shared.
+3. wrap the components: Wrap all the components in provider component that need access to context values
+4. consume context value: To access the context value within a component we use `useContext()` that allow us to use context values directly by passing the context object(created in first step) as argument to the hook.
+
+## Redux
+
+It's a container state container for javascript applications
+
+**Redux principles**
+
+1. first principle: Entire state of an application is stored in a single javascript object called `state tree` or `store`.
+2. second principle: State tree is immutable, it is readonly. Instead anytime we want to change state we dispatch an action(represent the change or update in the state). Action is a javascript object and it's structure is upto us but it has a `type` property that indicates the type of action being performed.
+
+**Difference between pure and impure function**
+
+**pure functions**: 1. pure function soley depend on the input parameters being passed 2. The function doesn't cause any side effect.
