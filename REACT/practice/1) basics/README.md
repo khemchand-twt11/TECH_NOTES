@@ -55,5 +55,18 @@ React is a library for building user interface, primarly focused on creation of 
 ## Difference between normal script tag vs scirpt tag with async vs script tag with defer
 
 1. **Normal script tag**
-   blocks HTML parsing until the external resources are being loaded and executed
-   can affect performance if script size is large or loading slow
+
+   - blocks HTML parsing until the external resources are being loaded and executed
+   - can affect performance if script size is large or loading slow
+   - useful for script that needs to be load before the DOM is ready.
+
+2. **Script tag with async**
+
+   - downloads the script asyncrhonously, allow html parsing to be executed continuously
+   - Executes the script as soon as the script is downloaded
+   - Suitable for script that dont' rely on other scripts or the DOM being ready.
+
+3. **Script tag with defer**
+   - downloads the script asyncrhonously, like `async`
+   - Defer execution until HTML parsing is complete
+   - Good for the script that needs to be run after the DOM is ready
